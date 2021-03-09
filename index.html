@@ -1,12 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="css/shStyles.css">
+    <script src="js/shFunctions.js"></script>
+    </link>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            font-size: 1.2em;
+            background-color: rgb(203, 206, 211);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+            height: auto;
+            top: 0;
+            margin: auto;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .col-6 {
+                width: 50%;
+            }
+        }
+
+        input[type=text],
+        select {
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            background-color: green;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: darkgreen;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="header" class="header">
+        <script>
+            makeHeader("SanusHouse")
+        </script>
+        <div style="height: 35px;"></div>
+        <div id="menu" class="topnav">
+            <a href="#">Home</a>
+            <a href="#">Apply for Residency</a>
+            <a href="">How We Work</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+   
+    <div class="row container">
+
+        <div class="col-6">
+            <hr style="margin-left: 0px; width: 20%;height: 10px;background-color:red;border:none;border-radius: 5px;">
+            <div style="font-size: 2.5em;">
+                Safe and Clean, Sober Living
+            </div>
+
+            <div style="margin-top:30px;">
+                Life is full of challenges and each of us choose our own ways of coping with things we find
+                hard and difficult. The directors here at Sanus House are no differnt than you. We have all 
+                struggled to manage our lives. The vison of Sanus House is to help you find peace, hope and 
+                strenght through community.  
+            </div>
+
+            <div style="margin-top: 50px;font-weight: bold;">At Sanus House we offer:</div>
+            <div style="margin-left:20px;">
+                <li>Clean, safe and comfortable living.</li>
+                <li>A community (the House) where we all work together and for each other.</li>
+                <li>Order and accountability. You will be accountable to yourself and the House.</li>
+                <li>Self-managed. The House sets the guidelines to follow. Each person has a voice.</li>
+                <li>Actively engaged directors and House President. Help and assistance is never far.</li>
+                <li>You will be expected to contribute your time and talents.</li>
+                <li>You will have the opportunity to learn better habits and skills to manage the 
+                    challenges life throws at you.</li>
+            </div>
+            <div style="margin-top:30px;font-weight:bold;font-style: italic;font-size: .9em;">
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
