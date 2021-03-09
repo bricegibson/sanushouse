@@ -8,6 +8,11 @@ body {
     background: #f1f1f1;
 }
 
+.content {
+    width: 700px;
+    margin: auto;
+}
+
 /* Header/Title */
 .headerImg {
     text-align: center;
