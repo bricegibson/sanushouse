@@ -35,24 +35,27 @@
             <div style="font-size: 2.5em;">
                 Safe and Clean, Sober Living
             </div>
-            <div style="margin-top: 10px;">
+            <div style="margin-top:10px;">
                 As part of Sanus House you will be required to live a lifestyle that promotes sober living. You will have
                 obligations and expectations. It is expected you will attend a 12 step program and remain drug free. 
                 You will be required to take random UA tests. Most importantly, your particpation is voluntary, you may leave at any
                 time. For a full set of the rules and expectations <a href="houserules.html">visit this page.</a><br>
-                <ul>
-                    <li style="color:red;font-size:.8em;font-style: italic;">
-                        For safety reasons and lack of facilites, Sanus House is currently male only.
-                    </li>
-                    <li style="color:red;font-size:.8em;font-style: italic;">
-                        Sanus House does not discriminate for ANY reason. Your application is accepted or rejected on the basis
-                        of availablity and fit with the current residents.
-                    </li> 
-                    <li style="color:red;font-size:.8em;font-style: italic;">
-                        We do ask your race and age strictly for the purpose of tracking an reporting of resident
-                        demographics. You are not required to answer these questions.
-                    </li>                     
-                </ul>                                
+                <div style="margin-top:20px;font-size:.9em;">
+                    <ul>
+                        <li style="color:red;font-style: italic;">
+                            Sanus House is a male only facility.
+                        </li>
+                        <li style="color:red;font-style: italic;">
+                            Sanus House does not discriminate for ANY reason. Your application is accepted or rejected on the basis
+                            of availablity and fit with the current residents.
+                        </li> 
+                        <li style="color:red;font-style: italic;">
+                            We ask demographic (race, religion, gender, age) questions strictly for the purpose of 
+                            general analysis and reporting. You are not required to answer these questions and they have no
+                            bearing on your approval.
+                        </li>                     
+                    </ul>  
+                </div>                              
             </div>
             <form id="newContact" name="newContact">
                 <div style="margin: 30px 0 50px 0; padding: 15px; border:1px solid black;border-radius: 4px;">
@@ -61,31 +64,36 @@
                     </span>
                     <br>
                     <span style="font-size:.8em;font-style: italic;">
-                        Not all fields are required. But the more you give, helps us make an informed decision.
+                        Not all fields are required. But your answers do help us make an informed decision.
                     </span>
-                    <div class="row mb-2">
+
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Applicant:
+                    </div>
+
+                    <div class="row mt-2 mb-2">
                         <div class="col">
-                            <input id="applicant" class="form-control" type="text" placeholder="Your (Applicant's) Name...">
+                            <input id="applicant" class="form-control" type="text" placeholder="Name...">
                         </div>  
                         <div class="col">
-                            <input id="" type="text" class="form-control" placeholder="Who referred you...">
+                            <input id="" type="text" class="form-control" placeholder="Referral Source...">
                         </div>
                     </div>  
                     <div class="row mb-2">
                         <div class="col">
-                            <input id="email" class="form-control" type="text" placeholder="Your Email...">
+                            <input id="email" class="form-control" type="text" placeholder="Email...">
                         </div>
                         <div class="col">
-                            <input id="phone" class="form-control" type="text" placeholder="Your Phone Number...">
+                            <input id="phone" class="form-control" type="text" placeholder="Phone Number...">
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <div class="col">
-                            <input id="dob" class="form-control" type="text" placeholder="Your Date of Birth...">
+                            <input id="dob" class="form-control" type="text" placeholder="Date of Birth...">
                         </div>
                         <div class="col">
-                            <input id="" class="form-control" type="text" placeholder="Where do you currently reside...">
+                            <input id="" class="form-control" type="text" placeholder="Current Residence...">
                         </div>
                     </div>
                     
@@ -109,14 +117,33 @@
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
                     
                     <div class="row mb-2">
-                        <div class="col">
-                            <input id="sobriety" type="text" class="form-control" placeholder="Current sobriety status...">
+                        <div class="col" style="padding-top:6px;">
+                            <label class="float-right" for="curentSobriety">Are you sober now?</label>
                         </div>
                         <div class="col">
-                            <input id="longestSober" type="text" class="form-control" placeholder="What is the longest you have been sober since turning 18...">
+                            <select class="form-control" id="curentSobriety">
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>                            
                         </div>
                     </div>                    
-                    
+
+                    <div class="row mb-2">
+                        <div class="col" style="padding-top:6px;">
+                            <label class="float-right" for="longestSober">What is the longest you have gone sober?</label>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" id="longestSober">
+                                <option></option>
+                                <option>< 6 mos</option>
+                                <option>6 mos - 1 year</option>
+                                <option>1 - 2 years</option>
+                                <option>> 2 years</option>
+                            </select>                            
+                        </div>
+                    </div> 
+
                     <div class="row mb-2">
                         <div class="col">
                             <input id="useHistory" type="text" class="form-control" placeholder="What subtances have you used in the past...">
@@ -146,44 +173,54 @@
                     <input id="" type="text" placeholder="Dop you take any medication...">
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Emergency Contact:
+                    </div>
 
                     <div class="row mb-2">
                         <div class="col">
-                            <input id="emergencyContact" class="form-control" type="text" placeholder="Emergency Contact...">
+                            <input id="emergencyContact" class="form-control" type="text" placeholder="Name...">
                         </div>
                         <div class="col">
-                            <input id="emergencyContact" class="form-control" type="text" placeholder="Your relationship...">
+                            <input id="emergencyContact" class="form-control" type="text" placeholder="Relationship...">
                         </div>
                     </div>                    
                     
                     <div class="row mb-2">
                         <div class="col">
-                            <input id="emergencyEmail" class="form-control" type="text" placeholder="Emergency Contact Email...">
+                            <input id="emergencyEmail" class="form-control" type="text" placeholder="Email...">
                         </div>
                         <div class="col">
-                            <input id="emergencyPhone" class="form-control" type="text" placeholder="Emergency Contact Phone...">
+                            <input id="emergencyPhone" class="form-control" type="text" placeholder="Phone...">
                         </div>
                     </div>  
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
 
-                    <input id="" class="form-control mb-2" type="text" placeholder="Reference Name">
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input id="" class="form-control" type="text" placeholder="Reference Email">
-                        </div>
-                        <div class="col">
-                            <input id="" class="form-control" type="text" placeholder="Reference Phone">
-                        </div>
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Reference:
                     </div>
 
-                    <input id="" class="form-control mb-2" type="text" placeholder="Reference Name">
+                    <input id="" class="form-control mb-2" type="text" placeholder="Name">
                     <div class="row mb-2">
                         <div class="col">
-                            <input id="" class="form-control" type="text" placeholder="Reference Email">
+                            <input id="" class="form-control" type="text" placeholder="Email">
                         </div>
                         <div class="col">
-                            <input id="" class="form-control" type="text" placeholder="Reference Phone">
+                            <input id="" class="form-control" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3"></div>
+                    
+                    <input id="" class="form-control mb-2" type="text" placeholder="Name">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <input id="" class="form-control" type="text" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input id="" class="form-control" type="text" placeholder="Phone">
                         </div>
                     </div>
 
