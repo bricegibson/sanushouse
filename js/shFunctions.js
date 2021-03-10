@@ -29,3 +29,45 @@ function topNav() {
     
 
 }
+
+function sendEmail() {
+
+    var formJSON = {};
+
+    $('#btnSubmitSpinner').show();
+    $('#btnSubmitText').text("Updating...");
+
+    $("input, textarea").each(function() {
+        formJSON[$(this).attr("id")] = $(this).val();
+    });
+
+    $("select").each(function() {
+        formJSON[$(this).attr("id")] = $(this).val();
+        if($(this).attr("data-text")) {
+            formJSON[$(this).attr("data-text")] = $("option:selected", this).text();
+        }
+    });
+
+    console.log(formJSON);
+
+    $.ajax({
+        method: "POST",
+        url: `https://uk7d698mc3.execute-api.us-west-1.amazonaws.com/Dev/apply`,
+        data: formJSON,
+        success: function (res) {
+            console.log(res);
+            $('#btnSubmitSpinner').hide();
+            $('#btnSubmitText').text("Submit");
+            $('#btnSubmit').addClass("invisible");
+            $('#btnSubmitStatus').addClass("alert alert-success");
+            $('#btnSubmitStatus').text(res);            
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            $('#btnSubmitSpinner').hide();
+            $('#btnSubmitText').text("Submit");
+            $('#btnSubmit').addClass("invisible");
+            $('#btnSubmitStatus').addClass("alert alert-success");
+            $('#btnSubmitStatus').text(jqXHR); 
+        }
+    });
+}
