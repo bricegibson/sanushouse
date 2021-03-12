@@ -8,38 +8,46 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/shStyles.css"></link>
+    <link rel="stylesheet" href="css/shStyles.css">
     <script src="js/shFunctions.js"></script>
 
 </head>
 
 <body>
-    <div id="header" class="header">
-        <script>
-            makeHeader("SanusHouse")
-        </script>
-        <div style="height: 35px;"></div>
-        <div id="menu" class="topnav">
-            <a href="index.html">Home</a>
-            <a href="apply.html">Apply for Residency</a>
-            <a href="">How We Work</a>
-            <a href="#">About</a>
-        </div>
-    </div>
-   
-    <div class="content">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="apply.html">Apply for Residency</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#">How We Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">About</a>
+            </li>            
+        </ul>
+    </nav>
 
+    <div class="content">
+        
         <div>
+            <div id="header"></div>
             <hr style="margin-left: 0px; width: 20%;height: 10px;background-color:red;border:none;border-radius: 5px;">
-            <div style="font-size: 2.5em;">
+            <div class="col-sm" style="font-size: 2.5em;">
                 Safe and Clean, Sober Living
             </div>
-            <div style="margin-top:10px;">
+            <div class="col-sm" style="margin-top:10px;">
                 As part of Sanus House you will be required to live a lifestyle that promotes sober living. You will have
                 obligations and expectations. It is expected you will attend a 12 step program and remain drug free. 
                 You will be required to take random UA tests. Most importantly, your particpation is voluntary, you may leave at any
-                time. For a full set of the rules and expectations <a href="houserules.html">visit this page.</a><br>
-                <div style="margin-top:20px;font-size:.9em;">
+                time.
+                <br> 
+                
+                <div class="col-sm" style="margin-top:20px;font-size:.9em;">
                     <ul>
                         <li style="color:red;font-style: italic;">
                             Sanus House is a male only facility.
@@ -62,7 +70,7 @@
                         To learn more and for careful consideration, please enter the following:
                     </span>
                     <br>
-                    <span style="font-size:.8em;font-style: italic;">
+                    <span style="font-size:.8em;font-style: italic;color:red;">
                         Not all fields are required. But your answers do help us make an informed decision.
                     </span>
 
@@ -71,27 +79,30 @@
                     </div>
 
                     <div class="row mt-2 mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="applicant" class="form-control" type="text" placeholder="Name...">
                         </div>  
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="referralSource" type="text" class="form-control" placeholder="Referral Source...">
                         </div>
                     </div>  
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="email" class="form-control" type="text" placeholder="Email...">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="phone" class="form-control" type="text" placeholder="Phone Number...">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <div class="col">
-                            <input id="dob" class="form-control" type="text" placeholder="Date of Birth...">
+                        <div class="col-sm-1" style="margin-top:10px;">
+                            DOB:
                         </div>
-                        <div class="col">
+                        <div class="col-sm-5">
+                            <input id="dob" class="form-control" type="date" placeholder="Date of Birth...">
+                        </div>
+                        <div class="col-sm">
                             <input id="currentResidence" class="form-control" type="text" placeholder="Current Residence...">
                         </div>
                     </div>
@@ -99,16 +110,16 @@
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
 
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="employer" class="form-control" type="text" placeholder="Employer...">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="employerName" class="form-control" type="text" placeholder="Employer Contact Name...">
                         </div>
                     </div>                    
                     
                     <div class="row mb-2">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <input id="employerPhone" class="form-control" type="text" placeholder="Employer Contact Phone...">
                         </div>
                     </div>  
@@ -116,79 +127,79 @@
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
                     
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="curentSobriety">Are you sober now?</label>
-                            <select class="form-control" id="curentSobriety">
-                                <option></option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>                            
+                            <input id="curentSobriety" class="form-control"  list="listCurrentSobriety" type="text">
+                            <datalist id="listCurrentSobriety">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>                            
                         </div>
-                        <div class="col">
-                            <label for="longestSober">What is the longest you have gone sober?</label>
-                            <select class="form-control" id="longestSober">
-                                <option></option>
-                                <option>< 6 mos</option>
-                                <option>6 mos - 1 year</option>
-                                <option>1 - 2 years</option>
-                                <option>> 2 years</option>
-                            </select>                            
+                        <div class="col-sm">
+                            <label for="longestSober">What is your longest period of sobriety?</label>
+                            <input id="longestSober" class="form-control"  list="listLongestSobriety" type="text">
+                            <datalist id="listLongestSobriety">
+                                <option value="< 6 months">
+                                <option value="6 months - 1 year">
+                                <option value="1 - 2 years">
+                                <option value="> 2 years">
+                            </datalist>  
                         </div>                        
                     </div>                    
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <textarea class="form-control" rows="4" id="pastUsageHistory" placeholder="Tell us about your past usage history..."></textarea>
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="relationshipStatus">Are you in a relationship?</label>
-                            <select class="form-control" id="relationshipStatus">
-                                <option></option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>   
+                            <input class="form-control" id="relationshipStatus" list="listRelationshipStatus" type="text">
+                            <datalist id="listRelationshipStatus">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>  
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="schoolComplete">Highest grade completed</label>
-                            <select class="form-control" id="schoolComplete">
-                                <option></option>
-                                <option>Middle/Jr School</option>
-                                <option>High School</option>
-                                <option>Some College</option>
-                                <option>College Degree</option>
-                            </select>   
+                            <input class="form-control" id="schoolComplete" list="listSchoolComplete" type="text">
+                            <datalist id="listSchoolComplete">
+                                <option value="Middle/Jr School">
+                                <option value="High School">
+                                <option value="Some college">
+                                <option value="College Degree">
+                            </datalist> 
                         </div>                        
                     </div>   
 
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="abideRules">Have you read and are you willing to abide by the House rules?</label>
-                            <select class="form-control" id="abideRules">
-                                <option></option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>   
+                            <input id="abideRules" class="form-control"  list="listAbideRules" type="text">
+                            <datalist id="listAbideRules">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>    
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="healthIssues">Do you have any health issues we need to be aware of (including disabilites)?</label>
-                            <select class="form-control" id="healthIssues">
-                                <option></option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>   
+                            <input id="healthIssues" class="form-control"  list="listHealthIssues" type="text">
+                            <datalist id="listHealthIssues">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>   
                         </div>                      
                     </div>  
 
                     <div class="row mb-2">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <label for="legalMedications">Do you take any legally prescribed medications?</label>
-                            <select class="form-control" id="legalMedications">
-                                <option></option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>   
+                            <input id="legalMedications" class="form-control"  list="listLegalMedications" type="text">
+                            <datalist id="listLegalMedications">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>    
                         </div>
                     </div>  
 
@@ -203,19 +214,19 @@
                     </div>
 
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="emergencyContactName" class="form-control" type="text" placeholder="Name...">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="emergencyContactRelation" class="form-control" type="text" placeholder="Relationship...">
                         </div>
                     </div>                    
                     
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="emergencyEmail" class="form-control" type="text" placeholder="Email...">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="emergencyPhone" class="form-control" type="text" placeholder="Phone...">
                         </div>
                     </div>  
@@ -228,10 +239,10 @@
 
                     <input id="referenceName1" class="form-control mb-2" type="text" placeholder="Name">
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="referenceEmail1" class="form-control" type="text" placeholder="Email">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="referencePhone1" class="form-control" type="text" placeholder="Phone">
                         </div>
                     </div>
@@ -240,10 +251,10 @@
                     
                     <input id="referenceName2" class="form-control mb-2" type="text" placeholder="Name">
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="referenceEmail2" class="form-control" type="text" placeholder="Email">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <input id="referencePhone2" class="form-control" type="text" placeholder="Phone">
                         </div>
                     </div>
@@ -256,8 +267,10 @@
                 </div>
             </form>
         </div>
-
     </div>
+    <script>
+        makeHeader("");
+    </script>    
 </body>
 
 </html>

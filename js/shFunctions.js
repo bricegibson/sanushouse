@@ -3,14 +3,14 @@
 function makeHeader(title) {
 
     //Header Title
-    document.title = `Sanus House - ${title}`;
+    document.title = `Sanus House ${title}`;
 
     //Header Div
     const header = document.querySelector('#header');
     header.style.height = "115px";
     header.style.marginBottom = "5px";
-    header.style.borderBottom = "1px solid black";
-    header.style.backgroundColor = "#ffffff";
+    // header.style.borderBottom = "1px solid black";
+    // header.style.backgroundColor = "#ffffff";
     
     //Header image
     const headerImg = document.createElement("img");
@@ -22,7 +22,7 @@ function makeHeader(title) {
 
     header.appendChild(headerImg);
     //header.appendChild(topNav());
-    document.body.appendChild(header);
+    //document.body.appendChild(header);
 }
 
 function topNav() {
@@ -48,26 +48,23 @@ function sendEmail() {
         }
     });
 
-    console.log(formJSON);
-
     $.ajax({
         method: "POST",
         url: `https://uk7d698mc3.execute-api.us-west-1.amazonaws.com/Dev/apply`,
-        data: formJSON,
+        data: JSON.stringify(formJSON),
         success: function (res) {
-            console.log(res);
             $('#btnSubmitSpinner').hide();
             $('#btnSubmitText').text("Submit");
             $('#btnSubmit').addClass("invisible");
             $('#btnSubmitStatus').addClass("alert alert-success");
-            $('#btnSubmitStatus').text(res);            
+            $('#btnSubmitStatus').text(`Thank you for your submission we will contact you soon to follow up.`);            
         },
         error: function(jqXHR, textStatus, errorThrown){
             $('#btnSubmitSpinner').hide();
             $('#btnSubmitText').text("Submit");
             $('#btnSubmit').addClass("invisible");
             $('#btnSubmitStatus').addClass("alert alert-success");
-            $('#btnSubmitStatus').text(jqXHR); 
+            $('#btnSubmitStatus').text(`There has been an error please call us at (385) 350-3013.`); 
         }
     });
 }

@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta property="og:site_name" content="SanusHouse">
+
+    <!-- lookup opengraph -->
+    <!-- check out <template> and dynamic page content -->
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -12,119 +16,47 @@
 
     <link rel="stylesheet" href="css/shStyles.css">
     <script src="js/shFunctions.js"></script>
-    </link>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            font-size: 1.2em;
-            background-color: rgb(203, 206, 211);
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-            height: auto;
-            top: 0;
-            margin: auto;
-        }
-
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        [class*="col-"] {
-            float: left;
-            padding: 15px;
-        }
-
-        /* For mobile phones: */
-        [class*="col-"] {
-            width: 100%;
-        }
-
-        @media only screen and (min-width: 768px) {
-
-            /* For desktop: */
-            .col-6 {
-                width: 50%;
-            }
-        }
-
-        input[type=text],
-        select {
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        input[type=submit] {
-            width: 20%;
-            background-color: green;
-            color: black;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: darkgreen;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="header" class="header">
-        <script>
-            makeHeader("SanusHouse")
-        </script>
-        <div style="height: 35px;"></div>
-        <div id="menu" class="topnav">
-            <a href="#">Home</a>
-            <a href="#">Apply for Residency</a>
-            <a href="">How We Work</a>
-            <a href="#">About</a>
-        </div>
-    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="apply.html">Apply for Residency</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#">How We Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">About</a>
+            </li>            
+        </ul>
+    </nav>
    
     <div class="content">
 
         <div class="col">
+            <div id="header"></div>
             <hr style="margin-left: 0px; width: 20%;height: 10px;background-color:red;border:none;border-radius: 5px;">
             <div style="font-size: 2.5em;">
                 Safe and Clean, Sober Living
             </div>
 
-            <div class="col alert alert-info" role="alert">We will be taking applications very soon. We expect to open before April 1st 2021. 
-                In the meantime please call us at <span style="font-weight:bold;">(385) 350-3013</span>.
+            <div class="col alert alert-info" role="alert">We are now taking applications!. 
+                We expect to open before April 1st 2021. 
+                Please complete an <a href="apply.html">application</a> or call us at <span style="font-weight:bold;">(385) 350-3013</span>.
             </div>
 
             <div class="col" style="margin-top: 50px;">
                 Life is full of challenges and each of us choose our own ways of coping with things we find
-                hard and difficult. The directors here at Sanus House are no differnt than you. We have all 
-                struggled to manage our lives. The vison of Sanus House is to help you find peace, hope and 
-                strenght through community.  
+                hard and difficult. The directors here at Sanus House are no different than you. We have all 
+                struggled to manage our lives at one time or another. The vison of Sanus House is to help each 
+                of us find peace, hope and strenght through community.  
             </div>
 
             <div style="margin-top: 50px;font-weight: bold;">At Sanus House we offer:</div>
@@ -143,6 +75,9 @@
             </div>
         </div>
     </div>
+    <script>
+        makeHeader("");
+    </script>     
 </body>
 
 </html>
