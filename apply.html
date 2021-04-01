@@ -1,53 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="css/shStyles.css">
     <script src="js/shFunctions.js"></script>
 
+    <title>Sanus House</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="apply.html">Apply for Residency</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" href="#">How We Work</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">About</a>
-            </li>            
-        </ul>
-    </nav>
 
-    <div class="content">
-        
-        <div>
-            <div id="header"></div>
-            <hr style="margin-left: 0px; width: 20%;height: 10px;background-color:red;border:none;border-radius: 5px;">
-            <div class="col-sm" style="font-size: 2.5em;">
-                Safe and Clean, Sober Living
-            </div>
-            <div class="col-sm" style="margin-top:10px;">
+    <div class= "w3-col" id="nav"></div>
+
+    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+        <div class="w3-display-topleft" style="padding-top:50px;padding-left:40px;">
+            <img src="img/logo.png" alt="Sanus House" style="width:30%">
+        </div>
+    </div>
+
+    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 50%; margin-top: 100px; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+          <h3>Residency Application</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+
+
+            <div class="w3-col" style="margin-top:10px;">
                 As part of Sanus House you will be required to live a lifestyle that promotes sober living. You will have
                 obligations and expectations. It is expected you will attend a 12 step program and remain drug free. 
                 You will be required to take random UA tests. Most importantly, your particpation is voluntary, you may leave at any
-                time.
+                time. You can read all the House rules <a href="houserules.html" target="_self">here</a>.
                 <br> 
                 
-                <div class="col-sm" style="margin-top:20px;font-size:.9em;">
+                <div class="w3-col" style="margin-top:20px;font-size:.9em;">
                     <ul>
                         <li style="color:red;font-style: italic;">
                             Sanus House is a male only facility.
@@ -64,7 +58,7 @@
                     </ul>  
                 </div>                              
             </div>
-            <form id="newContact" name="newContact">
+            <form id="newContact" class="w3-container" name="newContact">
                 <div style="margin: 30px 0 50px 0; padding: 15px; border:1px solid black;border-radius: 4px;">
                     <span style="font-weight: bold;">
                         To learn more and for careful consideration, please enter the following:
@@ -78,66 +72,66 @@
                         Applicant:
                     </div>
 
-                    <div class="row mt-2 mb-2">
-                        <div class="col-sm">
-                            <input id="applicant" class="form-control" type="text" placeholder="Name...">
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="applicant" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
                         </div>  
-                        <div class="col-sm">
-                            <input id="referralSource" type="text" class="form-control" placeholder="Referral Source...">
+                        <div class="w3-half">
+                            <input id="referralSource" class="w3-input w3-border w3-round" type="text" placeholder="Referral Source...">
                         </div>
                     </div>  
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="email" class="form-control" type="text" placeholder="Email...">
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="email" class="w3-input w3-border w3-round" type="text" placeholder="Email...">
                         </div>
-                        <div class="col-sm">
-                            <input id="phone" class="form-control" type="text" placeholder="Phone Number...">
+                        <div class="w3-half">
+                            <input id="phone" class="w3-input w3-border w3-round" type="text" placeholder="Phone Number...">
                         </div>
                     </div>
 
-                    <div class="row mb-2">
-                        <div class="col-sm-1" style="margin-top:10px;">
-                            DOB:
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <div class="w3-col" style="width:50px; margin:10px 5px 0 5px;" >DOB:</div>   
+                            <div class="w3-rest">
+                                <input id="dob" class="w3-input w3-border w3-round" type="date">
+                            </div>
                         </div>
-                        <div class="col-sm-5">
-                            <input id="dob" class="form-control" type="date" placeholder="Date of Birth...">
-                        </div>
-                        <div class="col-sm">
-                            <input id="currentResidence" class="form-control" type="text" placeholder="Current Residence...">
+                        <div class="w3-half">
+                            <input id="currentResidence" class="w3-input w3-border w3-round" type="text" placeholder="Current Residence...">
                         </div>
                     </div>
                     
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
 
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="employer" class="form-control" type="text" placeholder="Employer...">
-                        </div>
-                        <div class="col-sm">
-                            <input id="employerName" class="form-control" type="text" placeholder="Employer Contact Name...">
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="employer" class="w3-input w3-border w3-round" type="text" placeholder="Employer...">
                         </div>
                     </div>                    
-                    
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <input id="employerPhone" class="form-control" type="text" placeholder="Employer Contact Phone...">
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="employerName" class="w3-input w3-border w3-round" type="text" placeholder="Employer Contact Name...">
+                        </div>
+                        <div class="w3-half">
+                            <input id="employerPhone" class="w3-input w3-border w3-round" type="text" placeholder="Employer Contact Phone...">
                         </div>
                     </div>  
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
                     
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <label for="curentSobriety">Are you sober now?</label>
-                            <input id="curentSobriety" class="form-control"  list="listCurrentSobriety" type="text">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <label for="curentSobriety">Are you sober now?</label><br>
+                            <input id="curentSobriety" class="w3-input w3-border w3-round"  list="listCurrentSobriety" type="text">
                             <datalist id="listCurrentSobriety">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>                            
                         </div>
-                        <div class="col-sm">
-                            <label for="longestSober">What is your longest period of sobriety?</label>
-                            <input id="longestSober" class="form-control"  list="listLongestSobriety" type="text">
+                        <div class="w3-half">
+                            <label for="longestSober">What is your longest period of sobriety?</label><br>
+                            <input id="longestSober" class="w3-input w3-border w3-round"  list="listLongestSobriety" type="text">
                             <datalist id="listLongestSobriety">
                                 <option value="< 6 months">
                                 <option value="6 months - 1 year">
@@ -146,24 +140,24 @@
                             </datalist>  
                         </div>                        
                     </div>                    
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <textarea class="form-control" rows="4" id="pastUsageHistory" placeholder="Tell us about your past usage history..."></textarea>
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <textarea class="w3-input w3-border w3-round" rows="4" id="pastUsageHistory" style="width: 100%;" placeholder="Tell us about your past usage history..."></textarea>
                         </div>
                     </div>
 
-                    <div class="row mb-2">
-                        <div class="col-sm">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
                             <label for="relationshipStatus">Are you in a relationship?</label>
-                            <input class="form-control" id="relationshipStatus" list="listRelationshipStatus" type="text">
+                            <input class="w3-input w3-border w3-round" id="relationshipStatus" list="listRelationshipStatus" type="text">
                             <datalist id="listRelationshipStatus">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>  
                         </div>
-                        <div class="col-sm">
-                            <label for="schoolComplete">Highest grade completed</label>
-                            <input class="form-control" id="schoolComplete" list="listSchoolComplete" type="text">
+                        <div class="w3-half">
+                            <label for="schoolComplete">Highest grade completed:</label>
+                            <input class="w3-input w3-border w3-round" id="schoolComplete" list="listSchoolComplete" type="text">
                             <datalist id="listSchoolComplete">
                                 <option value="Middle/Jr School">
                                 <option value="High School">
@@ -173,18 +167,18 @@
                         </div>                        
                     </div>   
 
-                    <div class="row mb-2">
-                        <div class="col-sm">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
                             <label for="abideRules">Have you read and are you willing to abide by the House rules?</label>
-                            <input id="abideRules" class="form-control"  list="listAbideRules" type="text">
+                            <input id="abideRules" class="w3-input w3-border w3-round"  list="listAbideRules" type="text">
                             <datalist id="listAbideRules">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>    
                         </div>
-                        <div class="col-sm">
+                        <div class="w3-half">
                             <label for="healthIssues">Do you have any health issues we need to be aware of (including disabilites)?</label>
-                            <input id="healthIssues" class="form-control"  list="listHealthIssues" type="text">
+                            <input id="healthIssues" class="w3-input w3-border w3-round"  list="listHealthIssues" type="text">
                             <datalist id="listHealthIssues">
                                 <option value="Yes">
                                 <option value="No">
@@ -192,10 +186,10 @@
                         </div>                      
                     </div>  
 
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
                             <label for="legalMedications">Do you take any legally prescribed medications?</label>
-                            <input id="legalMedications" class="form-control"  list="listLegalMedications" type="text">
+                            <input id="legalMedications" class="w3-input w3-border w3-round"  list="listLegalMedications" type="text">
                             <datalist id="listLegalMedications">
                                 <option value="Yes">
                                 <option value="No">
@@ -204,73 +198,85 @@
                     </div>  
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <textarea class="w3-input w3-border w3-round" rows="5" id="comment" placeholder="Tell us about yourself..."></textarea>
+                        </div>
+                    </div>
 
-                    <textarea class="form-control" rows="5" id="comment" placeholder="Tell us about yourself..."></textarea>
-                    
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
                     
                     <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
                         Emergency Contact:
                     </div>
 
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="emergencyContactName" class="form-control" type="text" placeholder="Name...">
+                    <div class="w3-row-padding"  style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <input id="emergencyContactName" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
                         </div>
-                        <div class="col-sm">
-                            <input id="emergencyContactRelation" class="form-control" type="text" placeholder="Relationship...">
+                        <div class="w3-half">
+                            <input id="emergencyContactRelation" class="w3-input w3-border w3-round" type="text" placeholder="Relationship...">
                         </div>
                     </div>                    
                     
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="emergencyEmail" class="form-control" type="text" placeholder="Email...">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <input id="emergencyEmail" class="w3-input w3-border w3-round" type="text" placeholder="Email...">
                         </div>
-                        <div class="col-sm">
-                            <input id="emergencyPhone" class="form-control" type="text" placeholder="Phone...">
+                        <div class="w3-half">
+                            <input id="emergencyPhone" class="w3-input w3-border w3-round" type="text" placeholder="Phone...">
                         </div>
                     </div>  
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
 
                     <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
-                        Reference:
+                        References:
                     </div>
-
-                    <input id="referenceName1" class="form-control mb-2" type="text" placeholder="Name">
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="referenceEmail1" class="form-control" type="text" placeholder="Email">
-                        </div>
-                        <div class="col-sm">
-                            <input id="referencePhone1" class="form-control" type="text" placeholder="Phone">
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-3"></div>
-                    
-                    <input id="referenceName2" class="form-control mb-2" type="text" placeholder="Name">
-                    <div class="row mb-2">
-                        <div class="col-sm">
-                            <input id="referenceEmail2" class="form-control" type="text" placeholder="Email">
-                        </div>
-                        <div class="col-sm">
-                            <input id="referencePhone2" class="form-control" type="text" placeholder="Phone">
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-col">
+                            <input id="referenceName1" class="w3-input w3-border w3-round mb-2" type="text" placeholder="Name">
                         </div>
                     </div>
 
-                    <button class="btn btn-outline-primary btn-sm" type="button" id="btnSubmit">
-                        <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none;"></span>
-                        <span id="btnSubmitText" onclick="sendEmail()">Submit</span>
-                    </button>      
+                    <div class="w3-row-padding" style="margin-bottom: 15px;">
+                        <div class="w3-half">
+                            <input id="referenceEmail1" class="w3-input w3-border w3-round" type="text" placeholder="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input id="referencePhone1" class="w3-input w3-border w3-round" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+                    
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-col">
+                            <input id="referenceName2" class="w3-input w3-border w3-round mb-2" type="text" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 35px;">
+                        <div class="w3-half">
+                            <input id="referenceEmail2" class="w3-input w3-border w3-round" type="text" placeholder="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input id="referencePhone2" class="w3-input w3-border w3-round" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <button class="w3-button w3-border w3-round w3-border-blue w3-hover-blue" type="button" id="btnSubmit">
+                                <!-- <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none;"></span> -->
+                                <span id="btnSubmitText" onclick="sendEmail()">Submit</span>
+                            </button>
+                        </div>      
+                    </div>
                     <span id="btnSubmitStatus" style="font-weight: bold"></span>              
                 </div>
             </form>
         </div>
     </div>
-    <script>
-        makeHeader("");
-    </script>    
+    <script>topNav()</script>
 </body>
 
 </html>

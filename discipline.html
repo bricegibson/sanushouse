@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/shStyles.css">
+    <script src="js/shFunctions.js"></script>
+
+    <title>Sanus House</title>
+</head>
+
+<body>
+
+    <div class= "w3-col" id="nav"></div>
+
+    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+        <div class="w3-display-topleft" style="padding-top:50px;padding-left:40px;">
+            <img src="img/logo.png" alt="Sanus House" style="width:30%">
+        </div>
+    </div>
+
+    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 50%; margin-top: 100px; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+          <h3>Discipline Form</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+
+            <div class="w3-col" style="margin-top:10px;">
+            While difficult, discipline is necessary to maintain order in the House and to help 
+            faciliate an individual's personal recovery.
+
+            <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+
+            <div class="w3-row-padding" style="margin-bottom: 10px;">
+                <div class="w3-half">
+                    <label for="typeOf">Discipline Type:</label><br>
+                    <input id="typeOf" class="w3-input w3-border w3-round"  list="listTypeOf" type="text">
+                    <datalist id="listTypeOf">
+                        <option value="Notice">
+                        <option value="Violation">
+                    </datalist>                            
+                </div>
+                <div class="w3-half">
+                    <label for="offense">Offense:</label><br>
+                    <input id="offense" class="w3-input w3-border w3-round"  list="listOffense" type="text">
+                    <datalist id="listOffense">
+                        <option value="Failure to follow dress code">
+                        <option value="Lying"></option>
+                        <option value="Failure to follow given instructions">
+                        <option value="Failure to perform chore(s)"></option>
+                        <option value="Failure to follow other House rule"></option>
+                        <option value="Failure to pay for UA"></option>
+                        <option value="Failure to pay rent"></option>
+                        <option value="Refusing a UA"></option>
+                        <option value="Falsifying a UA"></option>
+                        <option value="Consuption of alcohol"></option>
+                        <option value="Possession of a firearm"></option>
+                        <option value="Possession of a dangerous weapon"></option>
+                        <option value="Refusing a serach of personal belongings or person"></option>
+                        <option value="Use of substance for the purpose of altering mood or conciousness"></option>
+                        <option value="Use of drug without proper medical perscription"></option>
+                        <option value="Use of marijuana"></option>
+                        <option value="Theft"></option>
+                        <option value="Possession of pornography"></option>
+                        <option value="Damaging any personal or real property"></option>
+                        <option value="Physical altercation"></option>
+                        <option value="Other illegal activity"></option>
+                    </datalist>  
+                </div>                        
+            </div> 
+            <div class="w3-row-padding" style="margin-bottom: 20px;">
+                <div class="w3-col">
+                    <textarea class="w3-input w3-border w3-round" rows="5" id="comment" placeholder="Comments..."></textarea>
+                </div>
+            </div>
+
+            <div class="w3-row-padding" style="margin-bottom: 10px;">
+                <div class="w3-half">
+                    <label for="offense">Offense Count:</label><br>
+                    <div style="padding-left: 20px;">
+                        <input type="radio" id="first" name="offenseCount" value="first">
+                        <label for="first">First</label><br>
+                        <input type="radio" id="second" name="offenseCount" value="second">
+                        <label for="second">Second</label><br>
+                        <input type="radio" id="third" name="offenseCount" value="third">
+                        <label for="third">Third</label><br><br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w3-row-padding" style="margin-bottom: 20px;">
+                <div class="w3-col">
+                    <textarea class="w3-input w3-border w3-round" rows="5" id="comment" placeholder="Action plan..."></textarea>
+                </div>
+            </div>
+            
+            <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+
+            <h1>Acknowledgment</h1>
+            <P>I have read and understand the above stated Offense and Action Plan.</P>
+            <p style="font-style: italic;"></p>   
+           
+            <p style="margin-top: 100px;">Resident (legal name):______________________________________ Date: ____________</p>
+            <p>Signature: ________________________________________________________________ </p>
+            <p style="margin-top: 40px;">Manager (legal name):______________________________________ Date: ____________</p>
+            <p>Signature: _________________________________________________________________ </p>
+            
+        </div>
+
+        <div class="w3-row-padding" style="margin-bottom: 10px;">
+            <div class="w3-col">
+                <button class="w3-button w3-border w3-round w3-border-blue w3-hover-blue" type="button" id="btnSubmit">
+                    <!-- <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none;"></span> -->
+                    <span id="btnSubmitText" onclick="">Print</span>
+                </button>
+            </div>      
+        </div>
+
+    </div>
+    
+    <script>topNav()</script>
+
+</body>
+
+</html>

@@ -1,86 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:site_name" content="SanusHouse">
 
-    <!-- lookup opengraph -->
-    <!-- check out <template> and dynamic page content -->
-
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/shStyles.css">
     <script src="js/shFunctions.js"></script>
 
+    <!-- https://www.youtube.com/watch?v=gXkqy0b4M5g -->
+    <!-- https://www.youtube.com/watch?v=M3qBpPw77qo -->
+
+    <style>
+        #header {
+            color: #fff;
+        }
+
+        #header .bg-image {
+            height: 500px;
+            background-image: url('img/shMainHandsUp2.png');
+            background-size: cover;
+            margin-top: 30px;
+            opacity: 80%;
+            z-index: -1;
+        }
+    </style>
+    <title>Sanus House</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="apply.html">Apply for Residency</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" href="#">How We Work</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Referral Network</a>
-            </li>              
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">About</a>
-            </li>            
-        </ul>
-    </nav>
-   
-    <div class="content">
+    <div class= "w3-col" id="nav"></div>
+    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+        <div class="bg-image"></div>
+        <div class="w3-display-topleft w3-third" style="padding-top:30px;padding-left:40px;">
+            <img src="img/logo.png" alt="Sanus House" style="width:50%">
+        </div>
+        <div class="w3-display-middle w3-center w3-twothirds">
+            <span class="w3-text-white w3-xlarge">
+                Life is full of challenges and each of us choose our own way of coping with things we find
+                hard and difficult. The directors here at Sanus House are no different than you. We have all
+                struggled to manage our lives at one time or another. The vison of Sanus House is to help each
+                of us find peace, hope and strenght through community.
+            </span>
+        </div>
+    </div>
 
-        <div class="col">
-            <div id="header"></div>
-            <hr style="margin-left: 0px; width: 20%;height: 10px;background-color:red;border:none;border-radius: 5px;">
-            <div style="font-size: 2.5em;">
-                Safe and Clean, Sober Living
-            </div>
-
-            <div class="col alert alert-info" role="alert">We are now taking applications!. 
-                We expect to open before April 1st 2021. 
-                Please complete an <a href="apply.html">application</a> or call us at <span style="font-weight:bold;">(385) 350-3013</span>.
-            </div>
-
-            <div class="col" style="margin-top: 50px;">
-                Life is full of challenges and each of us choose our own ways of coping with things we find
-                hard and difficult. The directors here at Sanus House are no different than you. We have all 
-                struggled to manage our lives at one time or another. The vison of Sanus House is to help each 
-                of us find peace, hope and strenght through community.  
-            </div>
-
-            <div style="margin-top: 50px;font-weight: bold;">At Sanus House we offer:</div>
-            <div class="col">
-                <li>Clean, safe and comfortable living.</li>
+    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+            <h3>Healing, Health and Recovery</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+            <ul>
                 <li>A community (the House) where we all work together and for each other.</li>
                 <li>Order and accountability. You will be accountable to yourself and the House.</li>
                 <li>Self-managed. The House sets the guidelines to follow. Each person has a voice.</li>
-                <li>Actively engaged directors and House President. Help and assistance is never far.</li>
-                <li>You will be expected to contribute your time and talents.</li>
-                <li>You will have the opportunity to learn better habits and skills to manage the 
-                    challenges life throws at you.</li>
+                <li>With actively engaged directors and a House President, help and assistance is never far.</li>
+                <li>You will contribute your time and talents.</li>
+                <li>You will learn better habits and skills to manage the challenges life throws at you.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+            <h3>Applying For Residency</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+            <p>
+                No two applicants are the same. No two life experiences are the same. When reviewing applicants we
+                look for hope, determination, honesty and respect. We also look for fit to prevent conflict and provide
+                a safe and rewarding environment.
+            </p>
+            <p>
+                As an accepted applicant (resident) you are expected to participate in chores, keep a tidy living space,
+                be
+                respectful, be honest with others and yourself. You will attend a 12 step program of your choosing and
+                submit to random UA tests. You will abide by a curfew. You will learn new skills along the way.
+            </p>
+            <p>
+                Most rooms are shared with one and sometimes two other people.
+            </p>
+            <p>Leadership roles are offered as they become available and are awarded based largely on commmitment and
+                trust.</p>
+            <ul>
+                <li>Monthly Room Rates, $400 - $600.</li>
+                <li>Leadership roles receive a discount based on role.</li>
+                <li>Deposit - $300 with $100 refundable when giving at least 30 day notice.</li>
+                <li>The remainder is used to prepare for the next resident.</li>
+            </ul>
+            <p>When paid on time, $10 of each rental payment is given back to the House to be used as the House chooses.
+            </p>
+            <p>You can apply for residency <a href="apply.html" target="_self">here</a>.</p>
+        </div>
+    </div>
+
+    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+            <h3>How We Work</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+            <p>
+                Sanus House is about your recovery. It is our goal to build a community of support, strength and courage
+                to overcome the things that destroy us and eat away at our souls. We aren't here to tell you what to do and
+                when to do it. We believe in and promote ownership and self care. You own your recovery. We aren't here to
+                force anyone into recovery. We know recovery only happens when the individual has a burning desire to change.
+                It's a desire that is stronger than the desire to hide in the shadows of darkness. You can 
+                review all the House rules <a href="houserules.html" target="_self">here</a>.
+            </p>
+            <div class="w3-half">
+                <h4 style="font-weight: 600;">THE PROCESS</h4>
+                <ol>
+                    <li>Fill out the online application.</li>
+                    <li>Your application is reviewed.</li>
+                    <li>You will be contacted for a brief phone conversation and interview.</li>
+                    <li>An appointment will be made for a more in depth interview with the house.</li>
+                    <li>The House will have a vote to determine if you are a good fit.</li>
+                    <li>You will be contacted regarding the decision.</li>
+                </ol>
+                
+                <p>If you are not accepted, a reason will be given at the time of the call.</p>
+
+                <div>If you are accepted you will be expected to do the following:</div>
+                <div>
+                    <ul>
+                        <li>Be sober for a minimum of 14 days.</li>
+                        <li>Take a urine test.</li>
+                        <li>Sign a contract agreeing to the house conditions and rules.</li>
+                        <li>Pay a $300 deposit and first month (prorated) rent.</li>
+                        <li>Begin probationary period (30 days).</li>
+                    </ul>
+                </div>
             </div>
-            <div style="margin-top:30px;font-weight:bold;font-style: italic;font-size: .9em;">
-                </a>
+            <div class="w3-half">
+                <h4 style="font-weight: 600;">WHAT WE SUPPLY</h4>
+                <div>
+                    <ul>
+                        <li>Twin size bed with mattress cover.</li>
+                        <li>Sheet set and blanket and Pillow.</li>
+                        <li>Use of kitchen and cookware.</li>
+                        <li>Utensils, dishes, cups and silverware.</li>
+                        <li>Common area furniture.</li>
+                        <li>Common area television with Netflix and Hulu.</li>
+                        <li>WiFi Internet access.</li>
+                        <li>Cleaning supplies.</li>
+                        <li>Landline Telephone access.</li>
+                    </ul>
+                </div>
+
+                <h4 style="font-weight: 600;">WHAT YOU SUPPLY</h4>
+                <div>
+                    <ul>
+                        <li>Food</li>
+                        <li>Toiletries</li>
+                        <li>Extra bedding</li>
+                        <li>Secure box for items needing security (if needed)</li>
+                        <li>Clothing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- <div id="about" class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff; margin-bottom: 30px;">
+            <h3>About</h3>
+        </header>
+        <div class="w3-panel w3-card" style="margin: auto; width: 90%; margin-bottom: 30px;">
+            <div class="w3-third">
+                <div class="w3-container w3-left">
+                    <p class="w3-xlarge">Brice Gibson</p>
+                    <p>Co-Founder, Sanus House</p>
+                </div>
+                <img src="img/Brice.jpg" style="height: 250px;">
+            </div>
+
+            <div class="w3-twothird">
+                <p>Brice has a BS degree in IT Management, is a Certified Project Managment Professional 
+                    and Licensed Real Estate Agent. His past career includes leadership roles as a Director,
+                    Vice-President and owner of several companies, largely under the brand of iKore. Brice 
+                    builds exceptional teams, helping to grow the skills and talents of others.
+                    At Sanus House, he drives the vision and growth of the company. 
+                </p>
+                <p>Brice has a passion for living life in the outdoors and traveling far and wide. His 
+                    greatest joy in life is his wife, children and grandchild. Brice is honored to be a 
+                    part of Sanus House and to experience the lives changed through recovery.
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-panel w3-card" style="margin: auto; width: 90%; margin-bottom: 30px;">
+            <div class="w3-third">
+                <div class="w3-container w3-left">
+                    <p class="w3-xlarge">Joann Gibson</p>
+                    <p>Co-Founder, Sanus House</p>
+                </div>
+                <img src="img/Joann.png" style="height: 250px;">
+            </div>
+            <div class="w3-twothird">
+                <div class="w3-container">
+                    <p>Joann has a Masters in Education Leadership from Brigham Young University.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-panel w3-card" style="margin: auto; width: 90%; margin-bottom: 30px;">
+            <div class="w3-third">
+                <div class="w3-container w3-left">
+                    <p class="w3-xlarge">Gary Smith</p>
+                    <p>Co-Founder, Sanus House</p>
+                </div>
+                <img src="img/Gary.png" style="height: 250px;">
+            </div>
+            <div class="w3-twothird">
+                <div class="w3-container">
+                    <p>After graduating High School Gary worked hard abut eventually let his addictions
+                        control his choices. After 15 years of being in and out of custody, Gary has 
+                        turned his life around with help in large part through a sober living home.
+                    </p>
+                    <p>
+                        Today Gary is fulfilling his dream of giving back and helping others in their
+                        goal of living a sober life.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-panel w3-card" style="margin: auto; width: 90%; margin-bottom: 30px;">
+            <div class="w3-third">
+                <div class="w3-container w3-left">
+                    <p class="w3-xlarge">Charlie Nelson</p>
+                    <p>Co-Founder, Sanus House</p>
+                </div>
+                <img src="img/Charlie.png" style="height: 250px;">
+            </div>
+            <div class="w3-twothird">
+                <div class="w3-container">
+                    <p>About Charlie</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="w3-panel w3-card" style="background-color: #242B43; color: #fff; margin-bottom: 30px;">
+        <div class="w3-row w3-center" style="font-size: 2.5em;margin-bottom: 30px;">Contact Us</div>
+        <div class="w3-row" style="margin-bottom:40px;font-size: 1.4em;">
+            <div class="w3-third w3-center">‪(385) 350-3013‬</div>
+            <div class="w3-third w3-center">TheSanusHouse@gmail.com</div>
+            <div class="w3-third w3-center">
+                <a href="https://www.facebook.com/theSanusHouse" target="_blank"><i class="fa fa-facebook-square" style="font-size:1.4em;"></i></a>
+                <a href="https://www.linkedin.com/company/sanus-house" target="_blank"><i class="fa fa-linkedin-square" style="font-size:1.4em;"></i></a>
             </div>
         </div>
     </div>
-    <script>
-        makeHeader("");
-    </script>     
+
+    <script>topNav()</script>
+
 </body>
 
 </html>
