@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/shStyles.css">
     <script src="js/shFunctions.js"></script>
 
     <!-- https://www.youtube.com/watch?v=gXkqy0b4M5g -->
     <!-- https://www.youtube.com/watch?v=M3qBpPw77qo -->
 
     <style>
+
+        body {
+            font-family: Arial;
+            background: #cacaca;
+        }
+
         #header {
             color: #fff;
         }
@@ -28,18 +33,32 @@
             opacity: 80%;
             z-index: -1;
         }
+        
+        @media screen and (min-width: 800px) {
+            .card-show {
+                width: 80%;
+                padding: 0;
+                margin: auto; 
+            }
+        }
+
+        .card-show {
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
     </style>
     <title>Sanus House</title>
 </head>
 
 <body>
-    <div class= "w3-col" id="nav"></div>
-    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+    <div id="nav"></div>
+    <div id="header" class="w3-display-container w3-grayscale-min" style="margin-bottom:20px;">
         <div class="bg-image"></div>
-        <div class="w3-display-topleft w3-third" style="padding-top:30px;padding-left:40px;">
+        <div class="w3-display-topleft w3-third w3-hide-small" style="padding-top:30px;padding-left:40px;">
             <img src="img/logo.png" alt="Sanus House" style="width:50%">
-        </div>
-        <div class="w3-display-middle w3-center w3-twothirds">
+        </div>         
+        <div class="w3-display-middle w3-center w3-twothirds w3-hide-small w3-hide-medium">
             <span class="w3-text-white w3-xlarge">
                 Life is full of challenges and each of us choose our own way of coping with things we find
                 hard and difficult. The directors here at Sanus House are no different than you. We have all
@@ -47,9 +66,25 @@
                 of us find peace, hope and strenght through community.
             </span>
         </div>
+        <div class="w3-display-middle w3-center w3-twothirds w3-hide-large w3-hide-small">
+            <span class="w3-text-white w3-xlarge">
+                Life is full of challenges and each of us choose our own way of coping with things we find
+                hard and difficult. The vison of Sanus House is to help each of us find peace, hope and strength 
+                through community.
+            </span>  
+        </div>
+        <div class="w3-display-middle w3-center w3-twothirds w3-hide-large w3-hide-medium">
+            <div class="w3-display-top w3-hide-large w3-hide-medium" style="margin-bottom:60px;" >
+                <img src="img/logo.png" alt="Sanus House" style="width:80%">
+            </div> 
+            <span class="w3-text-white w3-large ">
+                The vison of Sanus House is to help each of us find peace, hope and strength 
+                through community.
+            </span>                      
+        </div>
     </div>
 
-    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+    <div class="w3-card-4 card-show">
         <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
             <h3>Healing, Health and Recovery</h3>
         </header>
@@ -65,7 +100,7 @@
         </div>
     </div>
 
-    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+    <div class="w3-card-4 card-show">
         <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
             <h3>Applying For Residency</h3>
         </header>
@@ -98,7 +133,7 @@
         </div>
     </div>
 
-    <div class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
+    <div class="w3-card-4 card-show">
         <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
             <h3>How We Work</h3>
         </header>
@@ -165,9 +200,9 @@
         </div>  
     </div>
 
-    <!-- <div id="about" class="w3-card-4 w3-round-large" style="margin: auto; width: 80%; margin-bottom: 30px;">
-        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff; margin-bottom: 30px;">
-            <h3>About</h3>
+    <div class="w3-card-4 card-show">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+          <h3>About</h3>
         </header>
         <div class="w3-panel w3-card" style="margin: auto; width: 90%; margin-bottom: 30px;">
             <div class="w3-third">
@@ -179,7 +214,7 @@
             </div>
 
             <div class="w3-twothird">
-                <p>Brice has a BS degree in IT Management, is a Certified Project Managment Professional 
+                <p>Brice has a BS degree in IT Management, is a Certified Project Management Professional 
                     and Licensed Real Estate Agent. His past career includes leadership roles as a Director,
                     Vice-President and owner of several companies, largely under the brand of iKore. Brice 
                     builds exceptional teams, helping to grow the skills and talents of others.
@@ -202,7 +237,16 @@
             </div>
             <div class="w3-twothird">
                 <div class="w3-container">
-                    <p>Joann has a Masters in Education Leadership from Brigham Young University.</p>
+                    <p>Joann has a Master’s in Education Leadership from Brigham Young University with 20 years’ 
+                        experience as an educator and leader. Joann has raised two children and has always had an 
+                        open door to friends, family, and the occasional stranger during their time of need. Joann 
+                        is currently the caretaker for the greatest grandson in the world.
+                    </p>
+                    <p>
+                       She feels fortunate to participate in making her brother's dream of helping others come true 
+                       and looks forward to seeing the benefit to those on the road to recovery and to the communities 
+                       they live in.
+                    </p>
                 </div>
             </div>
         </div>
@@ -217,13 +261,20 @@
             </div>
             <div class="w3-twothird">
                 <div class="w3-container">
-                    <p>After graduating High School Gary worked hard abut eventually let his addictions
-                        control his choices. After 15 years of being in and out of custody, Gary has 
-                        turned his life around with help in large part through a sober living home.
+                    <p>
+                        Gary obtained his GED and High School diploma while in prison in 2006. 
+                        He has worked as a pipefitter, in residential construction, and as a heavy 
+                        equipment operator. Gary looks forward to buying and remolding homes into sober 
+                        living homes as we grow Sanus House.
                     </p>
                     <p>
-                        Today Gary is fulfilling his dream of giving back and helping others in their
-                        goal of living a sober life.
+                        Gary is passionate about treating others with respect, leading by example, and reaching out
+                        to those who have struggled with addiction. He is excited to give back in a meaningful way
+                        through Sanus House.
+                    </p>
+                    <p>
+                        His personal goals include developing positive relationships, being a listening ear and 
+                        showing himself and others there is hope in recovery.
                     </p>
                 </div>
             </div>
@@ -238,11 +289,22 @@
             </div>
             <div class="w3-twothird">
                 <div class="w3-container">
-                    <p>About Charlie</p>
+                    <p>
+                        Charlie is a High School graduate with a year of college and has worked 17 years in the 
+                        carpentry business. His goals today include obtaining his contractor’s license and building
+                        future sober living homes.
+                    <p>
+                        Charlie is passionate about helping others discover a better life through sobriety. Having 
+                        struggled with addiction, the consequences, and the recovery steps, Charlie is now able to 
+                        help others address issues and difficult situations in a way that creates a positive outcome.
+                    </p>
+                    <p>
+                        Charlie enjoys may outdoor activities and feeling of freedom of riding motorcycles.
+                    </p>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="w3-panel w3-card" style="background-color: #242B43; color: #fff; margin-bottom: 30px;">
         <div class="w3-row w3-center" style="font-size: 2.5em;margin-bottom: 30px;">Contact Us</div>
