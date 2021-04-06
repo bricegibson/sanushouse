@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/shFunctions.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+    </style>
+
+    <title>Consent Form Print</title>
+</head>
+
+<body>
+
+    <div id="header" class="w3-top" style="margin:10px 0 0 10px; padding-bottom: 20px;">
+        <div><p style="float: left;">
+            <img src="img/logo.png" alt="Sanus House" style="width: 6%;">
+        </p></div>
+        <div><p><h4>Consent Form</h4></p></div>
+    </div>
+
+
+
+    <div class="w3-container w3-padding-24" style="font-size: 1.1em;">
+        <div class="w3-row-padding" style="margin-bottom: 10px;">
+            <div class="w3-half">
+                Name:
+                <span id="name"></span>
+            </div>
+        </div>
+        <div class="w3-row-padding" style="margin-bottom: 10px;">
+            <div class="w3-half">
+                Date of Birth (DOB):
+                <span id="dob"></span>
+            </div>
+        </div>
+        <div class="w3-row-padding" style="margin-bottom: 20px;">
+            <div class="w3-half">
+                Phone Number:
+                <input id="phone" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <p>
+            I,
+            <span id="name"></span>
+            , hereby authorize The Sanus House to receive or release 
+            information, as described below, to/from the following:
+        </p>
+        <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Person:
+                <input id="orgPerson1" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Organization/Relationship:
+                <input id="orgName1" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Phone:
+                <input id="orgPhone1" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Email:
+                <input id="orgEmail1" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div style="height:40px;"></div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Person:
+                <input id="orgPerson2" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Organization/Relationship:
+                <input id="orgName2" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Phone:
+                <input id="orgPhone2" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Email:
+                <input id="orgEmail2" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div style="height:40px;"></div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Person:
+                <input id="orgPerson3" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Organization/Relationship:
+                <input id="orgName3" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Phone:
+                <input id="orgPhone3" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Email:
+                <input id="orgEmail3" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div style="height:40px;"></div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Person:
+                <input id="orgPerson4" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Organization/Relationship:
+                <input id="orgName4" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                Phone:
+                <input id="orgPhone4" class="w3-input w3-border w3-round" type="text">
+            </div>
+            <div class="w3-half">
+                Email:
+                <input id="orgEmail4" class="w3-input w3-border w3-round" type="text">
+            </div>
+        </div>
+
+        <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+        
+        <p style="margin-top: 40px;">INFORMATION TO BE RELEASED (please initial all that apply):</p>
+        
+        <ul>
+            <dt>____	Drug and/or alcohol treatment/recovery plan</dt>
+            <dt>____	UA Results</dt>
+            <dt>____	Fulfillment of The Sanus House Resident Agreement (rules and regulations)</dt>
+            <dt>____	Communication including logs, text, mail, email, and verbal</dt>
+            <dt>____	Other (Please be specific): ________________________________________</dt>
+        </ul>
+        
+        <div style="height:40px;"></div>
+        
+        <h3>ACKNOWLEDGEMENTS</h3>
+        
+        <ul>
+            <dt>____	I understand this information is being used for the purpose of coordination of care between listed parties.</dt>
+            <dt>____	I understand that authorizing this disclosure of health information is voluntary.</dt>
+            <dt>____	I understand I have the right to revoke this authorization at any time. </dt>
+        </ul>
+        
+        <div style="height:40px;"></div>
+
+        <h3>SIGNATURES</h3>
+        
+        <div style="font-size: .9em;">
+        <div style="height: 50px;">
+            Resident Name:_________________________ Signature:______________________________ Date:____________
+        </div>
+        
+        <div style="height: 50px;">
+            Witness Name: _________________________ Signature: ______________________________ Date: ___________
+        </div>
+        
+        <div style="margin-top: 30px;">
+            This release takes effect the date signed and expires 90 after residency terminates or
+            on ___________________ (date).
+        </div>
+        </div>
+
+        <p style="font-size: .6em;margin-top: 30px;">NOTICE: To Accompany Release of Substance Abuse Information:
+        This information has been disclosed to you from records protected by Federal confidentiality 
+        rules (42CFR part 2). The Federal rules prohibit you from making any further disclosure of 
+        this information unless further disclosure is expressly permitted by the written consent 
+        of the person to whom it pertains or as otherwise permitted by 42CFR part 2. A general 
+        authorization for the release of medical or other information is NOT sufficient for this 
+        purpose. The Federal rules restrict any use of the information to criminally investigate 
+        or prosecute any alcohol or drug abuse patients.
+        </p>
+
+    </div>    
+    <script>populatePage();</script>
+</body>
+
+</html>

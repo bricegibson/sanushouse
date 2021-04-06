@@ -81,3 +81,25 @@ function sendEmail() {
         }
     });
 }
+
+function printPage() {
+
+    $("input, textarea, select").each(function() {
+        window.localStorage.setItem($(this).attr("id"),$(this).val());
+    });
+
+    
+    console.log(window.localStorage);
+}
+
+function populatePage() {
+
+    $("span").each(function() {
+        console.log(window.localStorage.getItem($(this).attr("id")));
+        document.querySelector('#'+$(this).attr("id")).innerHTML = window.localStorage.getItem($(this).attr("id"))
+        //window.localStorage.setItem($(this).attr("id"),$(this).val());
+    });
+
+    //document.querySelector('#name').innerHTML = window.localStorage.getItem("name")
+
+}

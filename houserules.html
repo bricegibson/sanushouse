@@ -32,6 +32,14 @@
             margin-bottom: 20px;
         }
         
+        @media print {
+            .headerPrint {
+                display: block;
+            }
+            .headerNoPrint {
+                display: none;
+            }
+        }
     </style>
 
     <title>Sanus House</title>
@@ -39,12 +47,20 @@
 
 <body>
 
-    <div class= "w3-col" id="nav" text-left="House Rules"></div>
+    <div class= "w3-col headerNoPrint" id="nav" text-left="House Rules"></div>
 
-    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+    <div id="header headerNoPrint" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
         <div class="w3-display-topleft" style="padding-top:50px;padding-left:40px;">
-            <img src="img/logo.png" alt="Sanus House" style="width:30%">
+            <img src="img/logo.png" alt="Sanus House" style="width:18%">
         </div>
+    </div>
+
+    <div id="headerPrint" class="" style="display: none;">
+        <span>
+            <img src="img/logo.png" alt="Sanus House" style="width:8%">
+        </span>
+        <span>2091 West 7000 South West Jordan, UT 84084</span>
+
     </div>
 
     <div class="w3-card-4 card-show">
@@ -66,8 +82,9 @@
                     <dt>- Resident is responsible for the cost of their UA test(s), $5.00.</dt>
                     <dt>- If not paid at time of test, price is $10.00.</dt>
                     <li>For the safety of the residents:</li>
-                    <dt>- Non-residents are only permitted in common areas or your room (door must remain open).</dt>
-                    <dt>- Non-residents must have the permission of the House President prior to entering the House.</dt>
+                    <dt>- Visitors are only permitted in common areas or your room (door must remain open).</dt>
+                    <dt>- Visitors must have the permission of the House President prior to entering the House.</dt>
+                    <dt>- Visitors are not permitted after your designated curfew </dt>
                     <dt>- Residents must remain fully clothed in common areas (no bare feet, socks are ok).</dt>
                     <li>Entry and exit doors to the House must be locked at all times.</li>
                     <li>Residents will be given individual lock codes or keys.</li>
@@ -109,7 +126,8 @@
                     
                     <li>Rent is due on or before the 1st of each month.</li>
                         <dt>- $10 of each on-time payment will be donated to a house budget for common use items.</dt>
-                        <dt>- Late payments are charged $10 per day.</dt>
+                        <dt>- If you need an extenstion to pay rent, contact the House Manager before the first of the month. </dt>
+                        <dt>- Unapproved late payments are charged $5 per day to a maximum of 5 days.</dt>
                         <dt>- Resident is subject to automatic eviction if not paid by the 5th of the month.</dt>
                         <dt>- Payment can be made electronically (Venmo) or in-person.</dt>
                         <dt>- In person payments must be in an envelop with the residents name, date of payment
@@ -120,8 +138,9 @@
             
                 <h2>First 30 Days</h2>
                 <ul>
+                    <li>No visitors permitted.</li>
                     <li>All residents are required to enrole in a 12 step program and obtain sponsorship.</li>
-                    <dt>- One (1) violation will be issued for each week the resident remains non compliant.</dt>
+                    <dt>- One (1) write-up will be issued for each week the resident remains non compliant.</dt>
                     <li>All residents must attend five (5) weekly 12 step program meetings.</li>
                     <dt>- All attendance must be recorded and signed.</dt>
                     <li>All residents must checkin daily with the designated House President</li>
@@ -137,7 +156,7 @@
                     <li>Curfew 12:00 PM (midnight).</li>
                 </ul>
             
-                <h2>Extended Absenses</h2>
+                <h2>Extended Absenses, Overnight/Weekend passes</h2>
                 <ul>
                     <li>Only permitted after 30 days and with approval from the House (unanimous vote of all residents).</li>
                     <dt>- Emergency requests will be handled on a case by case basis by the House President.</dt>
@@ -153,10 +172,10 @@
             
                 <h2>Hygiene</h2>
                 <ul>
-                    <li>Shower regularly</li>
+                    <li>Shower daily</li>
                     <li>Brush Teeth</li>
                     <li>Wear deodorant</li>
-                    <li>Keep you clothing clean</li>
+                    <li>Wash your laundry, including bedding weekly</li>
                 </ul>
             
                 <h2>Pets</h2>
@@ -176,14 +195,14 @@
                     <li>NO VISITORS ARE PERMITTED WHO ARE OR ARE SUSPECTED TO BE UNDER THE INFLUENCE OF ALCOHOL, DRUGS
                         (LEGAL OR ILLEGAL) OR ANY OTHER SUBSTANCE TO ALTER CONSCIOUSNESS.
                     </li>
-                    <li>All visitors must be approved by the House President.</li>
+                    <li>All visitors must be approved by the House President, Vise President and house vote.</li>
                     <li>The House will keep a visitor log were all visitors must sign in and out.</li>
                     <li>Visitors must adhear to curfews.</li>
                     <li>Visitors may not stay over night.</li>
                     <li>Visitors must leave immedately if requested by the House President.</li>
                     <li>Visitors should be encouraged to remain within the common areas of the house.</li>
                     <li>Visitors may enter the bedroom of a resident only if invited and the door must remain open.</li>
-                    <li>Residents are responbile for the actions of their visitors. Residents can incur a notice, 
+                    <li>Residents are responbile for the actions of their visitors. Residents can incur a Write Up, 
                         violation or immediate discharge based on the actions of their visitor.
                     </li>
                 </ul>
@@ -218,7 +237,7 @@
             
                 <h2>Bedrooms</h2>
                 <ul>
-                    <li>Bedding must be kept clean and used.</li>
+                    <li>Bedding must be washed weekly and used on your bed.</li>
                     <li>Clothing must be hung up, in your dresser or in a laundry bin.</li>
                     <li>You are only permitted the use of your designated space.</li>
                     <li>Floors are to remain uncluttered and clean.</li>
@@ -281,8 +300,8 @@
                     <li>Maintain a clean personal and common living area.</li>
                 </ul>
                 
-                <h2>Notices</h2>
-                Are associated with minor infractions. Three (3) notices make one (1) violation.
+                <h2>Write Up</h2>
+                Are associated with minor infractions. Three (3) Write Ups make one (1) Volation.
                 <ul>
                     <li>Failue to complete a chore.</li>
                     <li>Clothing left in the laundry area longer than 1 hour.</li>
@@ -292,8 +311,8 @@
             
                 <h2>Violations</h2>
                 Three (3) violations result in review by The House and House Presidency. Consequences
-                and recourse include and are not limited to, seventy-two (72) hour, seven (7) day or 
-                up to (one) 1 year eviction and could lead to immediate discharge.
+                and recourse include and are not limited to, seventy-two (72) hour, five (5) day or 
+                up to thirty (30) day eviction and could lead to immediate discharge.
                 <ul>
                     <li>Failure to comply.</li>
                     <dt>- Instructions given by House President.</dt>
@@ -301,7 +320,7 @@
                     <li>Unexcused absense from manditory House meetings.</li>
                     <li>Unexcused absense from manditory 12 Step meetings.</li>
                     <li>Failue to meet curfew.</li>
-                    <li>Three (3) consecutive notices.</li>
+                    <li>Three (3) consecutive Write Ups.</li>
                     <li>Initial and consecutive dirty UA.</li>
                     <li>Smoking outside of designated smoking area.</li>
                 </ul>
@@ -309,8 +328,8 @@
                 <h2>Consequences and House Recourse</h2>
                 <ul>
                     <li>First offense, 72 hour eviction.</li>
-                    <li>Second offense, 7 day eviction</li>
-                    <li>Third offense, 1 year eviction</li>
+                    <li>Second offense, 5 day eviction</li>
+                    <li>Third offense, 30 day eviction</li>
                 </ul>
                 
                 <h2>Actions that Warrant Immediate Discharge:</h2>
@@ -339,14 +358,14 @@
                 </ul>
 
                 <h2>What to do if you are struggling</h2>
-                <p>Your success is paramount at the Sanus House. Our goal is to help you thrive outside of addiction.
+                <p>Your success is paramount at the Sanus House. Our goal is to help you thrive through addiction.
                     And we know, getting there can be challenging and overwhelming at times. We are here to help solve
                     some of the problems you will face while living with us.
                 </p>
                 <ul>
                     <li>Ask the House President for help.</li>
                     <li>While there can and will be consequences of your actions, we are not here to punish or condemn.</li>
-                    <li>Honesty should always be your first response.</li>
+                    <li>Honesty, integrity and accountability should always be your first response.</li>
                     <li>We will do everything we can to assist and get you back to where you need to be.</li>
                 </ul>
             
@@ -355,7 +374,7 @@
                 <h1>Acknowledgment</h1>
                 <P>I have read and understand the above stated rules.</P>
                 <p style="font-style: italic;">Failure to comply completely with the rules as stated can lead to
-                discipline to include the issuance of a Notice, Violation or immedate discharge and the possible
+                discipline to include the issuance of a Write Up, Violation or immedate discharge and the possible
                 loss of any prepaid rent and deposit monies.</p>   
                
                 <p style="margin-top: 100px;">Resident (legal name):______________________________________ Date: ____________</p>
