@@ -82,6 +82,54 @@ function sendEmail() {
     });
 }
 
+function newApplicant() {
+
+    var formJSON = {};
+
+    formJSON['applicantID'] = Date.now();
+
+    $('#btnSubmitSpinner').show();
+    $('#btnSubmitText').text("Updating...");
+
+    $("input, textarea").each(function() {
+        if($(this).val()) {
+            if($(this).attr("data-group")) {
+                formJSON[$(this).attr("data-group")] = formJSON[$(this).attr("data-group")] || {};
+                if($(this).attr("data-count")){
+                    formJSON[$(this).attr("data-group")][$(this).attr("data-count")] = formJSON[$(this).attr("data-group")][$(this).attr("data-count")] || {};
+                    formJSON[$(this).attr("data-group")][$(this).attr("data-count")][$(this).attr("id")] = $(this).val();
+                } else {
+                    formJSON[$(this).attr("data-group")][$(this).attr("id")] = $(this).val();
+                }
+            } else {
+                formJSON[$(this).attr("id")] = $(this).val();
+            }     
+        }
+    });
+
+    console.log(JSON.stringify(formJSON));
+    
+    $.ajax({
+        method: "POST",
+        url: `https://h8f0i7s0o4.execute-api.us-west-1.amazonaws.com/Dev/newapplicant`,
+        data: JSON.stringify(formJSON),
+        success: function (res) {
+            //$('#btnSubmitSpinner').hide();
+            $('#btnSubmitText').text("Submit");
+            $('#btnSubmit').addClass("invisible");
+            $('#btnSubmitStatus').addClass("alert alert-success");
+            $('#btnSubmitStatus').text(`Thank you for your submission we will contact you soon to follow up.`);            
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            $('#btnSubmitSpinner').hide();
+            $('#btnSubmitText').text("Submit");
+            $('#btnSubmit').addClass("invisible");
+            $('#btnSubmitStatus').addClass("alert alert-success");
+            $('#btnSubmitStatus').text(`There has been an error please call us at (385) 350-3013.`); 
+        }
+    });
+}
+
 function printPage() {
 
     $("input, textarea, select").each(function() {

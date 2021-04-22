@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/shFunctions.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial;
+            background: #cacaca;
+        }
+
+        @media screen and (min-width: 1100px) {
+            .card-show {
+                width: 50%;
+                padding: 0;
+                margin: auto; 
+            }
+        }
+
+        .card-show {
+            margin-top:150px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+
+    <title>Sanus House</title>
+</head>
+
+<body>
+
+    <div class= "w3-col" id="nav"></div>
+
+    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+        <div class="w3-display-topleft" style="padding-top:50px;padding-left:40px;">
+            <img src="img/logo.png" alt="Sanus House" style="width:18%">
+        </div>
+    </div>
+
+    <div class="w3-card-4 card-show">
+        <header class="w3-container w3-center" style="background-color: #242B43; color: #fff;">
+          <h3>Residency Application</h3>
+        </header>
+        <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+            <div class="w3-col" style="margin-top:10px;">
+                As part of Sanus House you will be required to live a lifestyle that promotes sober living. You will have
+                obligations and expectations. It is expected you will attend a 12 step program and remain drug free. 
+                You will be required to take random UA tests. Most importantly, your particpation is voluntary, you may leave at any
+                time. You can read all the House rules <a href="houserules.html" target="_self">here</a>.
+                <br> 
+                
+                <div class="w3-col" style="margin-top:20px;font-size:.9em;">
+                    <ul>
+                        <li style="color:red;font-style: italic;">
+                            Sanus House is a male only facility.
+                        </li>
+                        <li style="color:red;font-style: italic;">
+                            Sanus House does not discriminate for ANY reason. Your application is accepted or rejected on the basis
+                            of availablity and fit with the current residents.
+                        </li> 
+                        <li style="color:red;font-style: italic;">
+                            We ask demographic (race, religion, gender, age) questions strictly for the purpose of 
+                            general analysis and reporting. You are not required to answer these questions and they have no
+                            bearing on your approval.
+                        </li>                     
+                    </ul>  
+                </div>                              
+            </div>
+            <form id="newContact" class="w3-container" name="newContact">
+                <div style="margin: 30px 0 50px 0; padding: 15px; border:1px solid black;border-radius: 4px;">
+                    <span style="font-weight: bold;">
+                        To learn more and for careful consideration, please enter the following:
+                    </span>
+                    <br>
+                    <span style="font-size:.8em;font-style: italic;color:red;">
+                        Not all fields are required. But your answers do help us make an informed decision.
+                    </span>
+
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Applicant:
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="applicantName" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
+                        </div>  
+                        <div class="w3-half">
+                            <input id="referralSource" class="w3-input w3-border w3-round" type="text" placeholder="Referral Source...">
+                        </div>
+                    </div>  
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="email" class="w3-input w3-border w3-round" type="text" placeholder="Email...">
+                        </div>
+                        <div class="w3-half">
+                            <input id="phone" class="w3-input w3-border w3-round" type="text" placeholder="Phone Number...">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <div class="w3-col" style="width:50px; margin:10px 5px 0 5px;" >DOB:</div>   
+                            <div class="w3-rest">
+                                <input id="dob" class="w3-input w3-border w3-round" type="date">
+                            </div>
+                        </div>
+                        <div class="w3-half">
+                            <input id="currentResidence" class="w3-input w3-border w3-round" type="text" placeholder="Current Residence...">
+                        </div>
+                    </div>
+                    
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="Name" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer...">
+                        </div>
+                    </div>                    
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <input id="Contact" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Name...">
+                        </div>
+                        <div class="w3-half">
+                            <input id="Phone" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Phone...">
+                        </div>
+                    </div>  
+
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <label for="curentSobriety">Are you sober now?</label><br>
+                            <input id="curentSobriety" class="w3-input w3-border w3-round"  list="listCurrentSobriety" type="text">
+                            <datalist id="listCurrentSobriety">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>                            
+                        </div>
+                        <div class="w3-half">
+                            <label for="longestSober">What is your longest period of sobriety?</label><br>
+                            <input id="longestSober" class="w3-input w3-border w3-round"  list="listLongestSobriety" type="text">
+                            <datalist id="listLongestSobriety">
+                                <option value="< 6 months">
+                                <option value="6 months - 1 year">
+                                <option value="1 - 2 years">
+                                <option value="> 2 years">
+                            </datalist>  
+                        </div>                        
+                    </div>                    
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <textarea class="w3-input w3-border w3-round" rows="4" id="pastUsageHistory" style="width: 100%;" placeholder="Tell us about your past usage history..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <label for="relationshipStatus">Are you in a relationship?</label>
+                            <input class="w3-input w3-border w3-round" id="relationshipStatus" list="listRelationshipStatus" type="text">
+                            <datalist id="listRelationshipStatus">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>  
+                        </div>
+                        <div class="w3-half">
+                            <label for="schoolComplete">Highest grade completed:</label>
+                            <input class="w3-input w3-border w3-round" id="schoolComplete" list="listSchoolComplete" type="text">
+                            <datalist id="listSchoolComplete">
+                                <option value="Middle/Jr School">
+                                <option value="High School">
+                                <option value="Some college">
+                                <option value="College Degree">
+                            </datalist> 
+                        </div>                        
+                    </div>   
+
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <label for="abideRules">Have you read and are you willing to abide by the House rules?</label>
+                            <input id="abideRules" class="w3-input w3-border w3-round"  list="listAbideRules" type="text">
+                            <datalist id="listAbideRules">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>    
+                        </div>
+                        <div class="w3-half">
+                            <label for="healthIssues">Do you have any health issues we need to be aware of (including disabilites)?</label>
+                            <input id="healthIssues" class="w3-input w3-border w3-round"  list="listHealthIssues" type="text">
+                            <datalist id="listHealthIssues">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>   
+                        </div>                      
+                    </div>  
+
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-half">
+                            <label for="legalMedications">Do you take any legally prescribed medications?</label>
+                            <input id="legalMedications" class="w3-input w3-border w3-round"  list="listLegalMedications" type="text">
+                            <datalist id="listLegalMedications">
+                                <option value="Yes">
+                                <option value="No">
+                            </datalist>    
+                        </div>
+                    </div>  
+
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <textarea class="w3-input w3-border w3-round" rows="5" id="comment" placeholder="Tell us about yourself..."></textarea>
+                        </div>
+                    </div>
+
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Emergency Contact:
+                    </div>
+
+                    <div class="w3-row-padding"  style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <input id="Name" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Name...">
+                        </div>
+                        <div class="w3-half">
+                            <input id="Relationship" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Relationship...">
+                        </div>
+                    </div>                    
+                    
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-half">
+                            <input id="Email" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Email...">
+                        </div>
+                        <div class="w3-half">
+                            <input id="Phone" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Phone...">
+                        </div>
+                    </div>  
+
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        References:
+                    </div>
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-col">
+                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="0" type="text" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 15px;">
+                        <div class="w3-half">
+                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+                    
+                    <div class="w3-row-padding" style="margin-bottom: 5px;">
+                        <div class="w3-col">
+                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="1" type="text" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 35px;">
+                        <div class="w3-half">
+                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <button class="w3-button w3-border w3-round w3-border-blue w3-hover-blue" type="button" id="btnSubmit">
+                                <!-- <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none;"></span> -->
+                                <span id="btnSubmitText" onclick="newApplicant()">Submit</span>
+                            </button>
+                        </div>      
+                    </div>
+                    <span id="btnSubmitStatus" style="font-weight: bold"></span>              
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>topNav()</script>
+</body>
+
+</html>
