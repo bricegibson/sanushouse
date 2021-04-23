@@ -112,7 +112,7 @@ function newApplicant() {
     $.ajax({
         method: "POST",
         url: `https://uk7d698mc3.execute-api.us-west-1.amazonaws.com/Dev/newapplicant`,
-        data: JSON.stringify(formJSON),
+        data: formJSON,
         success: function (res) {
             //$('#btnSubmitSpinner').hide();
             $('#btnSubmitText').text("Submit");
