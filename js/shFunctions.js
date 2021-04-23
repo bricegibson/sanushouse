@@ -112,19 +112,28 @@ function newApplicant() {
     $.ajax({
         method: "POST",
         url: `https://uk7d698mc3.execute-api.us-west-1.amazonaws.com/Dev/newapplicant`,
-        data: formJSON,
+        //url: `https://uk7d698mc3.execute-api.us-west-1.amazonaws.com/Dev/apply`,
+        data: JSON.stringify(formJSON),
         success: function (res) {
+            if(res.errorMessage=='error') {
+                $('#btnSubmitSpinner').hide();
+                $('#btnSubmitText').text("Submit");
+                $('#btnSubmit').hide();
+                $('#btnSubmitStatus').addClass("alert alert-danger");
+                $('#btnSubmitStatus').text(`There has been an error please call us at (385) 350-3013.`); 
+                return;
+            };
             //$('#btnSubmitSpinner').hide();
             $('#btnSubmitText').text("Submit");
-            $('#btnSubmit').addClass("invisible");
+            $('#btnSubmit').hide();
             $('#btnSubmitStatus').addClass("alert alert-success");
             $('#btnSubmitStatus').text(`Thank you for your submission we will contact you soon to follow up.`);            
         },
         error: function(jqXHR, textStatus, errorThrown){
             $('#btnSubmitSpinner').hide();
             $('#btnSubmitText').text("Submit");
-            $('#btnSubmit').addClass("invisible");
-            $('#btnSubmitStatus').addClass("alert alert-success");
+            $('#btnSubmit').hide();
+            $('#btnSubmitStatus').addClass("alert alert-danger");
             $('#btnSubmitStatus').text(`There has been an error please call us at (385) 350-3013.`); 
         }
     });

@@ -52,6 +52,8 @@
           <h3>Residency Application</h3>
         </header>
         <div class="w3-container w3-padding-24" style="font-size: 1.2em;">
+
+
             <div class="w3-col" style="margin-top:10px;">
                 As part of Sanus House you will be required to live a lifestyle that promotes sober living. You will have
                 obligations and expectations. It is expected you will attend a 12 step program and remain drug free. 
@@ -92,7 +94,7 @@
 
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-half">
-                            <input id="applicantName" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
+                            <input id="applicant" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
                         </div>  
                         <div class="w3-half">
                             <input id="referralSource" class="w3-input w3-border w3-round" type="text" placeholder="Referral Source...">
@@ -123,16 +125,16 @@
 
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-half">
-                            <input id="Name" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer...">
+                            <input id="employer" class="w3-input w3-border w3-round" type="text" placeholder="Employer...">
                         </div>
                     </div>                    
 
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-half">
-                            <input id="Contact" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Name...">
+                            <input id="employerName" class="w3-input w3-border w3-round" type="text" placeholder="Employer Contact Name...">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Phone...">
+                            <input id="employerPhone" class="w3-input w3-border w3-round" type="text" placeholder="Employer Contact Phone...">
                         </div>
                     </div>  
 
@@ -230,19 +232,19 @@
 
                     <div class="w3-row-padding"  style="margin-bottom: 10px;">
                         <div class="w3-half">
-                            <input id="Name" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Name...">
+                            <input id="emergencyContactName" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
                         </div>
                         <div class="w3-half">
-                            <input id="Relationship" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Relationship...">
+                            <input id="emergencyContactRelation" class="w3-input w3-border w3-round" type="text" placeholder="Relationship...">
                         </div>
                     </div>                    
                     
                     <div class="w3-row-padding" style="margin-bottom: 10px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Email...">
+                            <input id="emergencyEmail" class="w3-input w3-border w3-round" type="text" placeholder="Email...">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Phone...">
+                            <input id="emergencyPhone" class="w3-input w3-border w3-round" type="text" placeholder="Phone...">
                         </div>
                     </div>  
 
@@ -253,31 +255,31 @@
                     </div>
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-col">
-                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="0" type="text" placeholder="Name">
+                            <input id="referenceName1" class="w3-input w3-border w3-round mb-2" type="text" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="w3-row-padding" style="margin-bottom: 15px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Email">
+                            <input id="referenceEmail1" class="w3-input w3-border w3-round" type="text" placeholder="Email">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Phone">
+                            <input id="referencePhone1" class="w3-input w3-border w3-round" type="text" placeholder="Phone">
                         </div>
                     </div>
                     
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-col">
-                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="1" type="text" placeholder="Name">
+                            <input id="referenceName2" class="w3-input w3-border w3-round mb-2" type="text" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="w3-row-padding" style="margin-bottom: 35px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Email">
+                            <input id="referenceEmail2" class="w3-input w3-border w3-round" type="text" placeholder="Email">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Phone">
+                            <input id="referencePhone2" class="w3-input w3-border w3-round" type="text" placeholder="Phone">
                         </div>
                     </div>
 
@@ -285,7 +287,7 @@
                         <div class="w3-col">
                             <button class="w3-button w3-border w3-round w3-border-blue w3-hover-blue" type="button" id="btnSubmit">
                                 <!-- <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none;"></span> -->
-                                <span id="btnSubmitText" onclick="newApplicant()">Submit</span>
+                                <span id="btnSubmitText" onclick="sendEmail()">Submit</span>
                             </button>
                         </div>      
                     </div>
