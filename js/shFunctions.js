@@ -48,6 +48,7 @@ function newApplicant() {
     var formJSON = {};
 
     formJSON['applicantID'] = Date.now();
+    formJSON['applicationDate'] = new Date().toLocaleDateString();
 
     $('#btnSubmitSpinner').show();
     $('#btnSubmitText').text("Updating...");
