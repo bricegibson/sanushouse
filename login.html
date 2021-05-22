@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/shFunctions.js"></script>
+    
+    <style>
+        .centerDiv {
+            margin: 0px auto;
+            padding: 0px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            font-family: Arial;
+            background: #ebebeb;
+        }
+
+        @media screen and (min-width: 1100px) {
+            .card-show {
+                width: 50%;
+                padding: 0;
+                margin: auto; 
+            }
+        }
+
+        .card-show {
+            margin-top:150px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+
+    <title>Sanus House</title>
+</head>
+
+<body>
+
+    <div class= "w3-col" id="nav"></div>
+
+    <div id="header" class="w3-display-container w3-grayscale-min" style="padding-bottom: 20px;">
+        <div class="w3-display-topleft" style="padding-top:50px;padding-left:40px;">
+            <img src="img/logo.png" alt="Sanus House" style="width:18%">
+        </div>
+    </div>
+
+    <div class="w3-container centerDiv" style="margin-top:25em; width: 45%;">
+        
+        <div style="float:left; width:45%;">
+            <div class="w3-card-4" style="height:300px; padding-top: 20px;background-color: #fff;">
+                <span style="font-size: 2.5em;color: rgb(156, 156, 156);">LOGIN</span>
+                <p style="padding: 20px;">If you already have an account you can log in here.</p>
+                <button  class="w3-button w3-border w3-round w3-border-blue w3-hover-blue" type="button" id="btnLogin" style="font-size: 1.5em;">Login</button>
+            </div>
+        </div>
+
+        <div style="float:right; width:45%;">
+            <div class="w3-card-4" style="height:300px; padding-top: 20px;background-color: #fff;">
+                <span style="font-size: 2.5em;color: rgb(156, 156, 156);">SIGN UP</span>
+                <p style="padding: 20px;">If you need an account you can sign up here.</p>
+                <button 
+                    class="w3-button w3-border w3-round w3-border-green w3-hover-green" 
+                    type="button" 
+                    id="btnSignUp"
+                    style="font-size: 1.5em;"
+                    onclick="document.querySelector('#SignUp').style.display='block'"
+                >Sign Up</button>
+            </div>
+        </div>   
+
+    </div>
+    
+    <div style="padding-top: 30px;margin: auto;width: 45%;text-align: center;color: rgb(93, 93, 93);">Access and registration is only available to admin, staff and residents. If you have any questions
+        or complications with accessing your account please contact support at (385) 350-3013.
+    </div>   
+
+    <script>topNav()</script>
+
+    <div id="SignUp" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container centerDiv" style="height: 500px;padding: 30px 0 30px 0;">
+
+                <div class="w3-row-padding" style="margin-bottom: 5px;">
+                    <div class="w3-half">
+                        <input id="loginName" class="w3-input w3-border w3-round" type="text" placeholder="Name...">
+                    </div>  
+                    <div class="w3-half">
+                        <input id="email" class="w3-input w3-border w3-round" type="text" placeholder="Email Address...">
+                    </div>
+                </div>  
+
+                <div class="w3-row-padding" style="margin-bottom: 30px;">
+                    <div class="w3-half">
+                        <input id="password" class="w3-input w3-border w3-round" type="text" placeholder="Password...">
+                    </div>  
+                    <div class="w3-half">
+                        <input id="passwordCheck" class="w3-input w3-border w3-round" type="text" placeholder="Verify Password...">
+                    </div>
+                </div> 
+
+                <div class="w3-row-padding" style="margin-bottom: 30px;">
+                    <div class="w3-half">
+                        <label for="curentlySober">I'm a?</label><br>
+                        <input id="curentlySober" class="w3-input w3-border w3-round"  list="listCurentlySober" type="text">
+                        <datalist id="listCurentlySober">
+                            <option value="Resident">
+                            <option value="Admin">
+                            <option value="Staff">    
+                        </datalist>   
+                    </div>  
+                    <div class="w3-half">
+                        <input id="passwordCheck" class="w3-input w3-border w3-round" type="text" placeholder="Verify Password...">
+                    </div>
+                </div>                 
+
+                <div style="width: 30%;margin: auto;">
+                    <span style="float: left;" onclick="document.querySelector('#SignUp').style.display='none'" class="w3-button w3-border w3-round w3-border-green w3-hover-green">Submit</span>
+                    <span style="float: right;" onclick="document.querySelector('#SignUp').style.display='none'" class="w3-button w3-border w3-round w3-border-red w3-hover-red">Cancel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
