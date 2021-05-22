@@ -123,16 +123,16 @@
 
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-half">
-                            <input id="Name" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer...">
+                            <input id="name" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer...">
                         </div>
                     </div>                    
 
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-half">
-                            <input id="Contact" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Name...">
+                            <input id="contact" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Name...">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Phone...">
+                            <input id="phone" class="w3-input w3-border w3-round" data-group="employment" type="text" placeholder="Employer Contact Phone...">
                         </div>
                     </div>  
 
@@ -140,9 +140,9 @@
                     
                     <div class="w3-row-padding" style="margin-bottom: 10px;">
                         <div class="w3-half">
-                            <label for="curentSobriety">Are you sober now?</label><br>
-                            <input id="curentSobriety" class="w3-input w3-border w3-round"  list="listCurrentSobriety" type="text">
-                            <datalist id="listCurrentSobriety">
+                            <label for="curentlySober">Are you sober now?</label><br>
+                            <input id="curentlySober" class="w3-input w3-border w3-round"  list="listCurentlySober" type="text">
+                            <datalist id="listCurentlySober">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>                            
@@ -174,9 +174,9 @@
                             </datalist>  
                         </div>
                         <div class="w3-half">
-                            <label for="schoolComplete">Highest grade completed:</label>
-                            <input class="w3-input w3-border w3-round" id="schoolComplete" list="listSchoolComplete" type="text">
-                            <datalist id="listSchoolComplete">
+                            <label for="education">Highest grade completed:</label>
+                            <input class="w3-input w3-border w3-round" id="education" list="listEducation" type="text">
+                            <datalist id="listEducation">
                                 <option value="Middle/Jr School">
                                 <option value="High School">
                                 <option value="Some college">
@@ -185,35 +185,39 @@
                         </div>                        
                     </div>   
 
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+                    
                     <div class="w3-row-padding" style="margin-bottom: 10px;">
-                        <div class="w3-half">
-                            <label for="abideRules">Have you read and are you willing to abide by the House rules?</label>
-                            <input id="abideRules" class="w3-input w3-border w3-round"  list="listAbideRules" type="text">
-                            <datalist id="listAbideRules">
-                                <option value="Yes">
-                                <option value="No">
-                            </datalist>    
-                        </div>
-                        <div class="w3-half">
-                            <label for="healthIssues">Do you have any health issues we need to be aware of (including disabilites)?</label>
+                        <div class="w3-twothird">
+                            <label for="healthIssues"></label>Do you have any health issues, including disabilites?</label>
+                        </div>                      
+                        <div class="w3-third">
                             <input id="healthIssues" class="w3-input w3-border w3-round"  list="listHealthIssues" type="text">
                             <datalist id="listHealthIssues">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>   
-                        </div>                      
+                        </div>
                     </div>  
-
-                    <div class="w3-row-padding" style="margin-bottom: 5px;">
-                        <div class="w3-half">
+                    
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-twothird">
                             <label for="legalMedications">Do you take any legally prescribed medications?</label>
+                        </div>                      
+                        <div class="w3-third">
                             <input id="legalMedications" class="w3-input w3-border w3-round"  list="listLegalMedications" type="text">
                             <datalist id="listLegalMedications">
                                 <option value="Yes">
                                 <option value="No">
                             </datalist>    
                         </div>
-                    </div>  
+                    </div> 
+
+                    <div class="w3-row-padding" style="margin-bottom: 10px;">
+                        <div class="w3-col">
+                            <textarea class="w3-input w3-border w3-round" rows="5" id="medicationList" placeholder="List all medications you are currently taking..."></textarea>
+                        </div>
+                    </div>
 
                     <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
                     <div class="w3-row-padding" style="margin-bottom: 10px;">
@@ -230,19 +234,19 @@
 
                     <div class="w3-row-padding"  style="margin-bottom: 10px;">
                         <div class="w3-half">
-                            <input id="Name" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Name...">
+                            <input id="name" class="w3-input w3-border w3-round" data-group="emergencyContact" type="text" placeholder="Name...">
                         </div>
                         <div class="w3-half">
-                            <input id="Relationship" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Relationship...">
+                            <input id="relationship" class="w3-input w3-border w3-round" data-group="emergencyContact" type="text" placeholder="Relationship...">
                         </div>
                     </div>                    
                     
                     <div class="w3-row-padding" style="margin-bottom: 10px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Email...">
+                            <input id="email" class="w3-input w3-border w3-round" data-group="emergencyContact" type="text" placeholder="Email...">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="emergency" type="text" placeholder="Phone...">
+                            <input id="phone" class="w3-input w3-border w3-round" data-group="emergencyContact" type="text" placeholder="Phone...">
                         </div>
                     </div>  
 
@@ -253,31 +257,48 @@
                     </div>
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-col">
-                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="0" type="text" placeholder="Name">
+                            <input id="name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="0" type="text" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="w3-row-padding" style="margin-bottom: 15px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Email">
+                            <input id="email" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Email">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Phone">
+                            <input id="phone" class="w3-input w3-border w3-round" data-group="reference" data-count="0" type="text" placeholder="Phone">
                         </div>
                     </div>
                     
                     <div class="w3-row-padding" style="margin-bottom: 5px;">
                         <div class="w3-col">
-                            <input id="Name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="1" type="text" placeholder="Name">
+                            <input id="name" class="w3-input w3-border w3-round mb-2" data-group="reference" data-count="1" type="text" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="w3-row-padding" style="margin-bottom: 35px;">
                         <div class="w3-half">
-                            <input id="Email" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Email">
+                            <input id="email" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Email">
                         </div>
                         <div class="w3-half">
-                            <input id="Phone" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Phone">
+                            <input id="phone" class="w3-input w3-border w3-round" data-group="reference" data-count="1" type="text" placeholder="Phone">
+                        </div>
+                    </div>
+
+                    <hr style="margin-left: 0px; width: 100%;height: 2px;background-color:rgb(212, 212, 212);border:none;border-radius: 5px;">
+
+                    <div style="font-size:1.3em;font-style: italic;font-weight:bold;margin-top:20px;">
+                        Acknowldgements:
+                    </div>
+
+                    <div class="w3-row-padding" style="margin-bottom: 35px;">
+                        <div class="w3-col">
+                            <ul>
+                                <input type="checkbox" id="acceptHouseRules" value="Yes">
+                                <label for="vehicle1"> I have read, understand and agree to adhere to the <a href="houserules.html" target="_blank">House Rules</a>.</label><br>
+                                <input type="checkbox" id="agree12Step" value="Yes">
+                                <label for="vehicle1"> I agree to participate in a 12-step program or approved equvalent.</label><br>
+                            </ul>
                         </div>
                     </div>
 
@@ -289,7 +310,8 @@
                             </button>
                         </div>      
                     </div>
-                    <span id="btnSubmitStatus" role="alert" style="font-weight: bold"></span>              
+
+                    <div id="btnSubmitStatus" style="font-weight: bold;text-align: center;height: 45px;display:none;" class="w3-panel w3-border w3-cell-middle"></div>              
                 </div>
             </form>
         </div>
