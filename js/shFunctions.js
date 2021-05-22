@@ -55,7 +55,6 @@ function newApplicant() {
 
     $("input, textarea").each(function() {
         if($(this).val()) {
-            //console.log($(this).prop('checked'))
             if($(this).attr("data-group")) {
                 formJSON[$(this).attr("data-group")] = formJSON[$(this).attr("data-group")] || {};
                 if($(this).attr("data-count")){
@@ -65,7 +64,6 @@ function newApplicant() {
                     formJSON[$(this).attr("data-group")][$(this).attr("id")] = $(this).val();
                 }
             } else if($(this).attr('type')=='checkbox') {
-                //console.log($(this))
                 if($(this).prop('checked')) {
                     formJSON[$(this).attr("id")] = $(this).val();
                 }
